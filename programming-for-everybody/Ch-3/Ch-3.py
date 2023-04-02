@@ -5,6 +5,8 @@ for i in range(1,10+1):
     if  i<2:
         print("less than 2")
     print("Done with index",i)
+    
+    
 # if-else condition
 
 y = 10
@@ -16,6 +18,7 @@ else:
     
     
 # Multi way Conditional / if-elif-else
+
 z = 15
 if z < 2 :
     print('Small')
@@ -29,3 +32,40 @@ elif z < 100:
     print('Huge')
 else :
     print('Ginormous')
+    
+
+# Try Except method for handling errors
+
+a = "abcde"
+try:
+    b = int(a)
+except:
+    b = "Answer is wrong"
+    
+print(b)
+
+#Another example
+
+astr = "Bob"
+
+try:
+    print("Bob")
+    istr = int(astr)
+    print("There")
+except:
+    istr = -1
+    
+print("Hello",istr)    
+
+# Try except method with practical example
+
+age = input("What is your age? ")
+
+try:
+    iage = int(age)
+except:
+    iage = -1
+if iage > 0:
+    print("You are awesome!")
+else:
+    print("Not a number")
