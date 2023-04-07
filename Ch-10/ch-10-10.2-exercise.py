@@ -13,7 +13,6 @@ for line in handle:
         line=line[0:2]
         d[line]=d.get(line,0)+1
 
-print(d)
 lst=list()        
 for value,count in d.items():
     lst.append((value,count))
@@ -21,3 +20,24 @@ for value,count in d.items():
 lst.sort()
 for value,count in lst:
     print(value,count)
+    
+
+#Second and best method
+
+name = raw_input("Enter file:")
+if len(name) < 1 : name = "mbox-short.txt"
+handle = open(name)
+d=dict()
+for line in handle:
+    if line.startswith("From "):
+        line = line.split()
+        line = line[5]
+        line = line[:2]
+        d[line] = d.get(line,0)+1
+        
+
+c=  sorted( [ (k,v) for k,v in d.items() ] ) 
+
+for k,v in c:
+    print(k,v)
+
