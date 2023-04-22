@@ -2,7 +2,7 @@
 # http://www.py4e.com/code3/bs4.zip
 # and unzip it in the same directory as this file
 
-from urllib.request import urlopen
+import urllib.request, urllib.error, urllib.parse
 from bs4 import BeautifulSoup
 import ssl
 
@@ -12,7 +12,7 @@ ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
 url = input('Enter - ')
-html = urlopen(url, context=ctx).read()
+html = urllib.request.urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, "html.parser")
 
 # Retrieve all of the anchor tags
