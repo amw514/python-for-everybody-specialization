@@ -1,0 +1,20 @@
+<employess>
+    <employes id="be124">
+        <firstName>John</firstName>
+        <lastName>Doe</lastName>
+        <titleJob>Engineer</titleJob>
+        <address>Lahore</address>
+        <building>232</building>
+        <room>19</room>
+    </employes>
+
+
+    <employes id="be125">
+        <firstName>Jonny</firstName>
+        <lastName>Cenny</lastName>
+        <titleJob>Doctor</titleJob>
+        <address>NY</address>
+        <building>232</building>
+        <room>49</room>
+    </employes>
+</employess>
